@@ -2,12 +2,12 @@
 
 # dependencies
 node_modules/
-
+_active.uusver
 # Expo
 .expo/
 dist/
 web-build/
-
+.gitignore
 # Native
 *.orig.*
 *.jks

@@ -1,8 +1,8 @@
 import { View, StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
-import AppBarTab from './AppBarTab';
 import theme from '../theme';
-
+import { Link} from 'react-router-native';
+import AppBarTab from "./AppBarTab";
 const styles = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight,
@@ -12,13 +12,23 @@ const styles = StyleSheet.create({
     height: 100, 
     borderBottomWidth: 1,
     display: "flex"
+  }, tab: {
+    fontSize: 18,
+    color: theme.colors.textTab,
+    marginLeft:20
   }
 });
 
 const AppBar = () => {
+
   return (
     <View style={styles.container}>
-      <AppBarTab  style={styles.tab} text={"Repositories"} />
+      <Link to="/">
+        <AppBarTab text={"Repositories"}/>
+      </Link>
+      <Link to="/signin">
+        <AppBarTab text={"Sign In"}/>
+      </Link>
     </View>
   );
 };

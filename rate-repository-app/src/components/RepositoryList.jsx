@@ -62,18 +62,20 @@ const ItemSeparator = () => <View style={styles.separator} />;
 export const RepositoryList = () => 
 {
   return (
-    <FlatList
-      data={repositories}
-      style={styles.container}
-      ItemSeparatorComponent={ItemSeparator}
-      renderItem={({ item, separators }) => (
-        <RepositoryItem
-          item={item}
-          onShowUnderlay={separators.highlight}
-          onHideUnderlay={separators.unhighlight}
-        />
-      )}
-    />
+    <>
+      <FlatList
+        data={repositories}
+        style={styles.container}
+        ItemSeparatorComponent={ItemSeparator}
+        renderItem={({ item, separators }) => (
+          <RepositoryItem
+            item={item}
+            onShowUnderlay={separators.highlight}
+            onHideUnderlay={separators.unhighlight}
+          />
+        )}
+      />
+    </>
   );
 };
 

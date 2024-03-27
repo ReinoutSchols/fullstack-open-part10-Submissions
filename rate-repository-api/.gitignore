@@ -1,0 +1,10 @@
+.env
+node_modules
+.DS_Store
+database.sqlite
+.prettierrc
+.eslintrc
+babel.config.js
+package-lock.json
+package.json
+README.md

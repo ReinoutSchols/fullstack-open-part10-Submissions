@@ -34,7 +34,7 @@ const SignIn = () => {
       marginBottom: 10,
       margin:20,
       padding:10,
-      fontFamily: theme.fonts.main
+      fontFamily: theme.fonts
     },
     background: {
       backgroundColor: "white",
@@ -43,7 +43,7 @@ const SignIn = () => {
     button: {
       margin:10,
       padding: 10,
-      fontFamily: theme.fonts.main
+      fontFamily: theme.fonts
     },
     errorText: {
       color: "#d73a4a"

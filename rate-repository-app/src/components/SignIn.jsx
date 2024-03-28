@@ -16,7 +16,7 @@ const validationSchema = yup.object().shape({
 });
 
 const SignIn = () => {
-  const [signIn, result] = useSignIn();
+  const [signIn] = useSignIn();
 
   const onSubmit = async (values) => {
     const { username, password } = values;
@@ -24,7 +24,6 @@ const SignIn = () => {
     try {
       const { data } = await signIn({ username, password });
       console.log(data);
-      console.log(result);
     } catch (e) {
       console.log(e);
     }

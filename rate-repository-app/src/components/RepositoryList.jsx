@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
 
 const ItemSeparator = () => <View style={styles.separator} />;
 
-export const RepositoryList = () => {
-  const { repositories } = useRepositories();
-  console.log("repositories in repolist component", repositories);
+
+
+export const RepositoryListContainer = ({ repositories }) => {
   const repositoryNodes = repositories
     ? repositories.edges.map(edge => edge.node)
     : [];
@@ -39,4 +39,10 @@ export const RepositoryList = () => {
   );
 };
 
+const RepositoryList = () => {
+  const { repositories } = useRepositories();
+        
+  return <RepositoryListContainer repositories={repositories} />;
+};
+        
 export default RepositoryList;
